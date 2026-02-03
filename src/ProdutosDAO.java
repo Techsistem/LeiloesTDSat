@@ -23,7 +23,7 @@ public class ProdutosDAO {
         try {
             prep = conn.prepareStatement(sql);
             prep.setString(1, produto.getNome());
-            prep.setInt(2, produto.getValor());
+            prep.setDouble(2, produto.getValor());
             prep.setString(3, produto.getStatus());
             
             prep.executeUpdate();
@@ -62,7 +62,7 @@ public class ProdutosDAO {
                 ProdutosDTO produto = new ProdutosDTO();
                 produto.setId(resultset.getInt("id"));
                 produto.setNome(resultset.getString("nome"));
-                produto.setValor(resultset.getInt("valor"));
+                produto.setValor(resultset.getDouble("valor"));
                 produto.setStatus(resultset.getString("status"));
                 
                 listagem.add(produto);
