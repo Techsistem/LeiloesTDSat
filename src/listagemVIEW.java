@@ -219,6 +219,7 @@ public class listagemVIEW extends javax.swing.JFrame {
                 });
             }
         } catch (Exception e) {
+            javax.swing.JOptionPane.showMessageDialog(null, "Erro ao listar: " + e.getMessage());
         }
     
     }
